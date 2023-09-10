@@ -26,14 +26,17 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(named: "route"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.isHidden = true
         return button
     }()
     let resetButton : UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "reset"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.isHidden = true
         return button
     }()
+    var annotationArray = [MKPointAnnotation]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,13 +46,38 @@ class ViewController: UIViewController {
         routeButton.addTarget(self, action: #selector(routeButtonTapped), for: .touchUpInside)
     }
     @objc func addAdressButtonTapped(){
-        print("Hi")
+        alertAddAdress(title: "add", placeholder: "input address", completionHandler: { [self](text) in setupPlaceMark(adressPlace: text)})
     }
     @objc func resetButtonTapped(){
         
     }
     @objc func routeButtonTapped(){
         
+    }
+    
+    private func setupPlaceMark(adressPlace : String){
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(adressPlace) {[self](placeMarks, error) in
+            if let error = error {
+                print(error)
+                alertError(title: "error", message: "Server is not available, try add adress again")
+            }
+            
+            guard let placeMarks = placeMarks else {return}
+            let placeMark = placeMarks.first
+            let annotation = MKPointAnnotation()
+            annotation.title = "\(adressPlace)"
+            guard let placeMarkLocation = placeMark?.location else {return}
+            annotation.coordinate = placeMarkLocation.coordinate
+            
+            annotationArray.append(annotation)
+            
+            if annotationArray.count > 2{
+                routeButton.isHidden = false
+                resetButton.isHidden = false
+            }
+            mapView.showAnnotations(annotationArray, animated: true)
+        }
     }
 }
 

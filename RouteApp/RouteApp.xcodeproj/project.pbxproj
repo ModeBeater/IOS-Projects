@@ -12,6 +12,7 @@
 		430435F92AAB6A540030E0AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430435F82AAB6A540030E0AC /* ViewController.swift */; };
 		430435FE2AAB6A560030E0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430435FD2AAB6A560030E0AC /* Assets.xcassets */; };
 		430436012AAB6A560030E0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430435FF2AAB6A560030E0AC /* LaunchScreen.storyboard */; };
+		430436092AAC57960030E0AC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430436082AAC57960030E0AC /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		430435FD2AAB6A560030E0AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430436002AAB6A560030E0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430436022AAB6A560030E0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430436082AAC57960030E0AC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				430435F42AAB6A540030E0AC /* AppDelegate.swift */,
 				430435F62AAB6A540030E0AC /* SceneDelegate.swift */,
 				430435F82AAB6A540030E0AC /* ViewController.swift */,
+				430436082AAC57960030E0AC /* Alert.swift */,
 				430435FD2AAB6A560030E0AC /* Assets.xcassets */,
 				430435FF2AAB6A560030E0AC /* LaunchScreen.storyboard */,
 				430436022AAB6A560030E0AC /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				430435F92AAB6A540030E0AC /* ViewController.swift in Sources */,
 				430435F52AAB6A540030E0AC /* AppDelegate.swift in Sources */,
+				430436092AAC57960030E0AC /* Alert.swift in Sources */,
 				430435F72AAB6A540030E0AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
