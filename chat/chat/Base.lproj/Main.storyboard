@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZXP-qH-eGm">
+                                <rect key="frame" x="16" y="59" width="361" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomMessageCell" id="0JR-FT-P4e">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0JR-FT-P4e" id="HHG-aw-g55">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="937-eN-0Ev">
+                                <rect key="frame" x="324" y="783" width="62" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="qL2-ga-49M"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="send"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vMS-WW-g0b">
+                                <rect key="frame" x="16" y="784" width="300" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vMS-WW-g0b" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="33v-er-kJH"/>
+                            <constraint firstItem="937-eN-0Ev" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="38k-Pz-ghb"/>
+                            <constraint firstItem="ZXP-qH-eGm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5IJ-fq-bS2"/>
+                            <constraint firstItem="937-eN-0Ev" firstAttribute="top" secondItem="ZXP-qH-eGm" secondAttribute="bottom" constant="8" symbolic="YES" id="Kfv-3u-bwI"/>
+                            <constraint firstItem="vMS-WW-g0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cfi-fv-EhJ"/>
+                            <constraint firstItem="vMS-WW-g0b" firstAttribute="top" secondItem="ZXP-qH-eGm" secondAttribute="bottom" constant="9" id="fhb-4a-9JA"/>
+                            <constraint firstItem="ZXP-qH-eGm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gSi-KU-797"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="937-eN-0Ev" secondAttribute="trailing" constant="7" id="i6D-Tf-739"/>
+                            <constraint firstItem="937-eN-0Ev" firstAttribute="top" secondItem="ZXP-qH-eGm" secondAttribute="bottom" constant="8" symbolic="YES" id="mDs-wt-una"/>
+                            <constraint firstItem="937-eN-0Ev" firstAttribute="leading" secondItem="vMS-WW-g0b" secondAttribute="trailing" constant="8" symbolic="YES" id="uj1-Ej-gv9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZXP-qH-eGm" secondAttribute="trailing" constant="16" id="vV3-pO-VTo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sendButton" destination="937-eN-0Ev" id="Qiw-DK-fLx"/>
+                        <outlet property="tableView" destination="ZXP-qH-eGm" id="A4f-sw-H0N"/>
+                        <outlet property="textView" destination="vMS-WW-g0b" id="d1R-ar-KjD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
